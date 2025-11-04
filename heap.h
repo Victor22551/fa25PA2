@@ -29,7 +29,7 @@ struct MinHeap {
         int minIdx = data[0];
         data[0] = data[size - 1];
         size--;
-        downheap(0,weightArr);
+        if (size > 0) downheap(0,weightArr);
         return minIdx;
     }
 
@@ -47,7 +47,7 @@ struct MinHeap {
         } else {
             break;
         }
-        }
+        
     }
                 
     }
